@@ -1,0 +1,7 @@
+---
+- name: Ensure that package is installed
+  become: true
+  ansible.builtin.apt:
+    name: "{{ amp_package_url }}"
+    update_cache: true
+    state: present

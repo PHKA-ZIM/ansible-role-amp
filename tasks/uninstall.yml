@@ -1,0 +1,8 @@
+---
+- name: Ensure that package is uninstalled
+  become: true
+  ansible.builtin.apt:
+    name: "{{ amp_package_name }}"
+    autoremove: "{{ amp_autoremove }}"
+    purge: "{{ amp_purge }}"
+    state: absent

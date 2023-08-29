@@ -1,0 +1,8 @@
+---
+- name: Intall cisco amp
+  ansible.builtin.include_tasks: install.yml
+  when: amp_uninstall == false
+
+- name: Uninstall cisco amp
+  ansible.builtin.include_tasks: uninstall.yml
+  when: amp_uninstall == true
