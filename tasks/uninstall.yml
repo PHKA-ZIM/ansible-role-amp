@@ -2,8 +2,7 @@
 - name: Ensure that packages are uninstalled
   become: true
   ansible.builtin.apt:
-    name: "{{ item }}"
+    name: "{{ amp_package }}"
     autoremove: "{{ amp_autoremove }}"
     purge: "{{ amp_purge }}"
     state: absent
-  loop: "{{ amp_packages }}"

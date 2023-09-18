@@ -1,7 +1,6 @@
 ---
 amp_package_url: https://console.eu.amp.cisco.com/install_packages/6e07aad3-4447-4244-99b3-5417b246fde9/download?product=LinuxProduct&product_variant_id=06faf563-b4a5-45be-bf54-2ab85248852c
-amp_packages:
-  - ciscoampconnector
+amp_package: ciscoampconnector
 
 amp_uninstall: false
 amp_autoremove: true

@@ -1,5 +1,9 @@
 ---
+- name: Gather installed packages
+  ansible.builtin.package_facts:
+
 - name: Ensure that packages are installed
+  when: amp_package not in ansible_facts.packages
   become: true
   ansible.builtin.apt:
     deb: "{{ amp_package_url }}"
